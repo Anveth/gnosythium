@@ -9,7 +9,7 @@ Roboczy tytuł autorskiej platformowej gry akcji 2D o magu. Mroczne średniowiec
 - Bez wersji telefonicznej i sterowania dotykowego.
 - Osobne repozytorium, projekt VS Code i projekt Codex; niezależne od GameLogs.
 - Docelowy darmowy hosting: GitHub Pages z osobnego publicznego repozytorium.
-- Nazwa repozytorium planowana: `Anveth/Gnosythium`; adres po publikacji: `https://anveth.github.io/Gnosythium/`.
+- Publiczne repozytorium: [Anveth/Gnosythium](https://github.com/Anveth/Gnosythium); docelowy adres po pierwszym wdrożeniu: `https://anveth.github.io/Gnosythium/`.
 - Odnośnik w GameLogs dopiero po przygotowaniu demonstracji.
 - Ewentualna aplikacja desktopowa w przyszłości, nie w pierwszym etapie.
 
@@ -22,7 +22,9 @@ Roboczy tytuł autorskiej platformowej gry akcji 2D o magu. Mroczne średniowiec
 
 ## Status
 
-Utworzono dokumentację startową. Kod pierwszej areny powstaje w osobnym czacie projektu. Samo istnienie dokumentacji nie oznacza, że gra, logowanie lub zapisy chmurowe już działają.
+Utworzono dokumentację startową, lokalne repo Git na `main` i zdalne repozytorium. Dokumentacja została wysłana na GitHub; Pages ma zapisane źródło **GitHub Actions**. Kod areny i workflow budowania nie zostały jeszcze utworzone — nie ma jeszcze działającego wdrożenia gry.
+
+Folder otwarto w osobnym oknie VS Code. Nowy czat implementacyjny oczekuje na dodanie folderu jako osobnego projektu w Codexie. Samo istnienie dokumentacji nie oznacza, że gra, logowanie lub zapisy chmurowe już działają.
 
 Nowy czat powinien uzupełnić instrukcje instalacji i uruchamiania po skonfigurowaniu projektu. Nie korzystaj z Live Server do uruchamiania źródeł TypeScript; używaj serwera Vite.
 

@@ -19,6 +19,13 @@
 
 Nie pomijaj tej wizji, ale nie próbuj realizować jej całej w jednej arenie. Propozycje asystenta nie są zatwierdzonym lore ani ostatecznym designem.
 
-## Status początkowy
+## Stan przekazania — 2026-10-24
 
-Ten plik utworzono przed kodem gry. Stan zdalnego repo, wdrożenia i komend uruchomienia należy odczytać na bieżąco, nie wywnioskować z planowanej nazwy/adresu.
+- Lokalny folder: `/Users/pawelszabunio/Desktop/Code/Front-end/Projects/Gnosythium`.
+- Zainicjalizowano repo na `main`; `origin` to `https://github.com/Anveth/Gnosythium.git`.
+- Publiczne repo utworzono w zalogowanej sesji GitHub użytkownika. Dokumentacja została wysłana, `main` śledzi `origin/main`.
+- GitHub Pages Source zapisano jako **GitHub Actions**. Nie ma jeszcze workflow ani wdrożonej gry. Nie przedstawiać docelowego adresu jako działającej gry.
+- Otworzono folder w nowym oknie VS Code.
+- Nie można dodać nowego projektu Codex dostępnymi narzędziami: użytkownika poproszono, aby dodał folder w aplikacji. Po pojawieniu się projektu źródłowy czat może utworzyć czat implementacyjny przez narzędzie create_thread.
+- Implementacja Phaser/Vite i arena należą do nowego czatu. Dodaj tam również workflow Pages zgodny z oficjalną dokumentacją Vite/GitHub i ścieżką `/Gnosythium/`.
+- Stan plików, Git i wdrożenia zawsze sprawdzić na bieżąco; ten zapis nie zastępuje weryfikacji.
