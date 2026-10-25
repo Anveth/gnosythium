@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0c141c" />
+    <meta name="description" content="Gnosythium — a small dark fantasy action-platformer prototype about a mage at a forgotten threshold." />
+    <title>Gnosythium · The first threshold</title>
+  </head>
+  <body>
+    <main id="app">
+      <div id="stage">
+        <div id="game" aria-label="Gnosythium game arena"></div>
+        <div id="hud" hidden>
+          <header class="hud-top">
+            <div class="location"><span class="eyebrow">GNOSYTHIUM / ARENA 01</span><span class="location-name">The first threshold</span></div>
+            <div class="objective"><span class="eyebrow">CURRENT OBJECTIVE</span><span id="objective">Find the floating seal</span></div>
+            <button id="pause" class="quiet-button" type="button" aria-label="Pause and show controls" aria-keyshortcuts="Escape P">Ⅱ <span>ESC / P</span></button>
+          </header>
+          <div class="hud-bottom">
+            <div class="resources">
+              <div class="resource-label"><span>VITALITY</span><span id="health-value">100 / 100</span></div>
+              <div id="health-meter" class="meter health" role="progressbar" aria-label="Health" aria-valuemin="0" aria-valuemax="100" aria-valuenow="100"><div id="health-fill"></div></div>
+              <div class="resource-label essence-label"><span>ESSENCE</span><span id="essence-value">100 / 100</span></div>
+              <div id="essence-meter" class="meter essence" role="progressbar" aria-label="Essence · spiritual energy for spells, healing and protection" aria-valuemin="0" aria-valuemax="100" aria-valuenow="100">
+                <div class="essence-fill"></div>
+                <span class="essence-sparks" aria-hidden="true"><i></i><i></i><i></i></span>
+              </div>
+            </div>
+            <div class="ability-strip">
+              <span title="Spectral bolts cost no essence"><kbd>LMB</kbd> SPECTRAL BOLT · FREE</span>
+              <span title="Hold for 360° protection"><kbd>RMB</kbd> ARCANE PROTECTION</span>
+              <span class="air-burst"><kbd>F</kbd> BREATH OF SYLF <span id="air-burst-status">Ready</span></span>
+              <span class="ground-smash"><kbd>S</kbd> TERRA STRIKE <span id="ground-smash-status">Jump to cast</span></span>
+              <span class="restoration"><kbd>R</kbd> BLESSING OF LIGHT <span id="heal-status">Ready</span></span>
+              <span><kbd>E</kbd> INTERACT</span>
+              <span class="air-jump"><kbd>↟↟</kbd> AIR JUMP <span id="air-jump-status">Ready</span></span>
+            </div>
+            <div class="run-status"><span class="eyebrow">CHECKPOINT</span><span id="checkpoint-status">Not attuned</span></div>
+          </div>
+          <div id="interaction" class="interaction" hidden></div>
+          <div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
+        </div>
+        <section id="overlay" class="overlay is-intro" aria-labelledby="overlay-title">
+          <div class="menu-card">
+            <img id="menu-sigil" class="sigil-mark" alt="" aria-hidden="true" />
+            <p id="overlay-eyebrow" class="eyebrow" hidden></p>
+            <h1 id="overlay-title">Gnosythium</h1>
+            <div class="title-rule" aria-hidden="true"><span></span>◇<span></span></div>
+            <p id="overlay-description" class="menu-description" hidden></p>
+            <div class="menu-actions">
+              <button id="primary-action" class="primary-button" type="button" disabled>Preparing the arena…</button>
+              <button id="secondary-action" class="secondary-button" type="button" hidden>Play in window</button>
+              <button id="checkpoint-action" class="checkpoint-button" type="button" hidden>Restart from checkpoint</button>
+              <button id="exit-fullscreen" class="secondary-button" type="button" hidden>Exit fullscreen</button>
+            </div>
+            <fieldset id="audio-settings" class="audio-settings">
+              <legend>Audio</legend>
+              <div class="audio-channel">
+                <label for="music-volume">Music</label>
+                <input id="music-volume" type="range" min="0" max="100" value="30" step="1" />
+                <output id="music-level" for="music-volume">30%</output>
+                <button id="music-mute" type="button" aria-label="Toggle music mute" aria-pressed="false">Mute</button>
+              </div>
+              <div class="audio-channel">
+                <label for="effects-volume">Effects</label>
+                <input id="effects-volume" type="range" min="0" max="100" value="100" step="1" />
+                <output id="effects-level" for="effects-volume">100%</output>
+                <button id="effects-mute" type="button" aria-label="Toggle sound effects mute" aria-pressed="false">Mute</button>
+              </div>
+            </fieldset>
+            <p id="menu-notice" class="menu-notice" role="status"></p>
+            <div id="controls" class="controls" aria-label="Keyboard and mouse controls"></div>
+            <p class="prototype-note">WORK IN PROGRESS</p>
+          </div>
+        </section>
+        <noscript><p class="no-script">Gnosythium requires JavaScript to run.</p></noscript>
+      </div>
+    </main>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
