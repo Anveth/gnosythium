@@ -9,7 +9,7 @@
 - Klawiatura i mysz; pełny ekran na komputerze. Obsługa pada jest tylko możliwością do późniejszej decyzji.
 - Osobny folder i lokalne repo Git, osobny projekt VS Code, osobny projekt Codex oraz nowy czat do implementacji.
 - Osobne publiczne repo GitHub i darmowy GitHub Pages, pod ścieżką projektu na tej samej domenie co GameLogs.
-- Uzgodniony adres pierwszej publikacji: **https://anveth.github.io/Gnosythium/**, repozytorium pozostaje **Anveth/Gnosythium**. Bez zmiany wielkości liter w nazwie repo, bez ingerencji w hosting/kod GameLogs i bez linku na jego stronie głównej. Zlecenie publikacji dotyczy wyłącznie gry.
+- Aktualny adres publikacji: **https://anveth.github.io/gnosythium/**, jedno repozytorium **Anveth/gnosythium**. Użytkownik zmienił nazwę repozytorium na małe litery; Vite i zasoby muszą używać dokładnie `/gnosythium/`. To zastępuje wcześniejszy wariant z dużym G. Bez ingerencji w hosting/kod GameLogs i bez linku na jego stronie głównej. Zlecenie publikacji dotyczy wyłącznie gry.
 - Ładne podlinkowanie z GameLogs **później, po przygotowaniu demonstracji**. Nie mieszać kodu aplikacji ani wdrożeń.
 - Przyszły port desktopowy jest możliwym kierunkiem, nie zadaniem na start. Bez portu mobilnego.
 - Start od prostych podstaw i pierwszej areny; duża wizja służy planowaniu dalszego rozwoju.

@@ -153,7 +153,7 @@ Audio SFX V6: osiem plików użytkownika jest ładowanych przez Phaser, importy 
 
 - `npm install`: zależności zainstalowane, utworzony `package-lock.json`; npm zgłosił 0 podatności przy tej instalacji.
 - `npm run typecheck`: strict TypeScript, bez emitowania kodu.
-- `npm run build`: kontrola typów i produkcyjne `dist` z prefiksem `/Gnosythium/`.
+- `npm run build`: kontrola typów i produkcyjne `dist` z prefiksem `/gnosythium/`.
 - Kontrola statyczna zmian i spójności dokumentacji.
 
 Vite zgłasza duży chunk zawierający Phaser (około 1,4 MB przed gzip). To ostrzeżenie rozmiaru, build kończy się powodzeniem. Nie wykonano testów automatycznych, kontroli przeglądarkowej ani faktycznego wdrożenia. Kompilacja nie potwierdza poprawnego działania rozgrywki lub oprawy.
@@ -175,7 +175,7 @@ Nowy zakres do odbioru: F na ziemi i w skoku, przeciwnicy w każdej ćwiartce wo
 5. Przed trafieniem pieczęci spróbować ominąć barierę pojedynczym/dwukrotnym skokiem, z najwyższej platformy i przy górnej granicy świata. Przejście powinno być zablokowane. Trafić pieczęć i przejść przez rozproszone pole; sprawdzić śmierć przed checkpointem, po checkpointcie i stan pieczęci/bariery przy odrodzeniu. Sprawdzić upadek w przepaść.
 6. Zmienić kartę lub okno z trzymanym ruchem/atakiem; wrócić i wznowić. Nie powinno być automatycznego wznowienia ani kontynuowania wcześniej trzymanych akcji. Potwierdzić pauzę/wznowienie przez Esc i P w oknie; w fullscreen krótki Esc po zgodzie na Keyboard Lock, odmowę/brak wsparcia z fallbackiem P, wyjście przez przytrzymanie Esc i przycisk w pauzie. Sprawdzić bezpieczeństwo po wyjściu, odblokowanie przy restarcie/shutdown i brak przechwytywania innych skrótów systemowych. Sprawdzić S oraz ↓ jako tę samą akcję smasha, bez ponownej aktywacji po naciśnięciu drugiego klawisza przy trzymanym pierwszym.
 7. Dotrzeć do końca i rozpocząć nowy run. Sprawdzić reset wrogów, bramy i checkpointu oraz brak podwójnej obsługi wejścia. Odświeżyć stronę i potwierdzić nową sesję.
-8. Po osobno zleconym pushu sprawdzić sukces Actions, adres Pages i assety pod `/Gnosythium/`. Dopiero wtedy potwierdzić działające wdrożenie.
+8. Po osobno zleconym pushu sprawdzić sukces Actions, adres Pages i assety pod `/gnosythium/` (małe litery, zgodnie z nazwą repo). Dopiero wtedy potwierdzić działające wdrożenie.
 
 ## Dobór zależności
 

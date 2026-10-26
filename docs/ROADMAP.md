@@ -47,6 +47,6 @@ Szkice użytkownika, wybrany styl, zestaw animacji jednej postaci i przeciwnika,
 
 ## Publikacja
 
-Publiczne repo istnieje: `Anveth/Gnosythium`. Pages ma źródło GitHub Actions, lokalnie przygotowano workflow oraz Vite `base: '/Gnosythium/'`. Pierwsze wdrożenie gry wymaga osobno zleconego pusha i udanego uruchomienia workflow. Nie kierować wdrożenia do repo GameLogs. GitHub Pages hostuje statyczną grę, nie bazę kont.
+Publiczne repo istnieje: `Anveth/gnosythium`, adres gry: `https://anveth.github.io/gnosythium/`. Pierwsze wdrożenie commita `665e18b` zakończyło się sukcesem w Actions (run `40225823566`); następnie użytkownik zmienił nazwę repo na małe litery. Konfiguracja Vite używa teraz `base: '/gnosythium/'`, aby zasoby nie trafiały pod dawny, zwracający 404 prefiks. Pages ma źródło GitHub Actions; kolejne wdrożenia wymagają sukcesu workflow i sprawdzenia opublikowanych zasobów. Nie kierować wdrożenia do repo GameLogs. GitHub Pages hostuje statyczną grę, nie bazę kont.
 
 Po dostępności demonstracji i kolejnej decyzji użytkownika: estetyczny kafelek/link w GameLogs. Później ewentualny test wydania desktopowego, bez telefonu.

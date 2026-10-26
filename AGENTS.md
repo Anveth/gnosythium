@@ -18,7 +18,7 @@ Read `docs/CONCEPT.md`, `docs/ROADMAP.md`, and `docs/HANDOFF.md`. Distinguish co
 - Keep game mechanics modular: scene orchestration, player controls, combat, enemy behavior, checkpoint state and HUD should not become a single giant file.
 - Separate input actions from keyboard bindings and persistence from gameplay, enabling later changes without rewriting combat.
 - Strict TypeScript. Inspect current package documentation and compatible versions before installing. Commit a lockfile. Avoid speculative dependencies or React unless there is a concrete need.
-- Respect the GitHub Pages project base path `/Gnosythium/`. Resolve assets through the configured base; do not hardcode root-relative game asset paths.
+- Respect the GitHub Pages project base path `/gnosythium/` (lowercase, matching the renamed repository). Resolve assets through the configured base; do not hardcode root-relative game asset paths.
 - If local saves are introduced, use namespaced keys such as `gnosythium:*`, never `gamelogs:*`. Both Pages sites may share an origin; different URL paths do not isolate browser storage.
 - Never put secret/service-role keys in frontend code or commits. Do not add unrelated user details or conversation transcripts containing personal information.
 - Do not copy copyrighted characters, names, maps, music or assets from reference games.

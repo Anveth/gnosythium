@@ -9,7 +9,7 @@ Roboczy tytuł autorskiej platformowej gry akcji 2D o magu. Mroczne średniowiec
 - Bez wersji telefonicznej i sterowania dotykowego.
 - Osobne repozytorium, projekt VS Code i projekt Codex; niezależne od GameLogs.
 - Docelowy darmowy hosting: GitHub Pages z osobnego publicznego repozytorium.
-- Publiczne repozytorium: [Anveth/Gnosythium](https://github.com/Anveth/Gnosythium); docelowy adres po pierwszym wdrożeniu: `https://anveth.github.io/Gnosythium/`.
+- Publiczne repozytorium: [Anveth/gnosythium](https://github.com/Anveth/gnosythium); adres gry: `https://anveth.github.io/gnosythium/`.
 - Odnośnik w GameLogs dopiero po przygotowaniu demonstracji.
 - Ewentualna aplikacja desktopowa w przyszłości, nie w pierwszym etapie.
 
@@ -26,7 +26,7 @@ Zaimplementowano pierwszą arenę: ruch, skok i double jump maga, celowanie mysz
 
 Kontrola typów i build produkcyjny przeszły lokalnie. Rozgrywka i wygląd w przeglądarce oczekują na sprawdzenie na wyraźne polecenie użytkownika. Checkpoint istnieje tylko w pamięci bieżącej sesji: odświeżenie strony zaczyna nowe przejście. Konta i trwałe zapisy pozostają kolejnym etapem.
 
-Workflow Pages jest przygotowany lokalnie. Kod tego etapu nie został zacommitowany ani wypchnięty; nie zaobserwowano pierwszego wdrożenia gry. Istniejące repozytorium i konfiguracja Pages pochodzą z zakończonego setupu.
+Pierwsze wdrożenie gry (`665e18b`, Actions `40225823566`) zakończyło się sukcesem. Po zmianie nazwy repozytorium na `gnosythium` baza Vite musi mieć małe litery; stary prefiks `/Gnosythium/` powoduje brak CSS/JavaScript i biały ekran. Aktualna konfiguracja używa `/gnosythium/`; workflow Pages publikuje build po pushu na `main`.
 
 ## Uruchomienie
 
@@ -38,7 +38,7 @@ npm ci
 npm run dev
 ```
 
-Otwórz [lokalną grę](http://127.0.0.1:5180/Gnosythium/). Gnosythium używa osobnego portu **5180**, aby działać równolegle z GameLogs na 5173. `strictPort` zatrzyma start, jeśli 5180 będzie zajęty, zamiast po cichu zmieniać adres. Po zmianie konfiguracji uruchom ponownie serwer Gnosythium przez `npm run dev`.
+Otwórz [lokalną grę](http://127.0.0.1:5180/gnosythium/). Gnosythium używa osobnego portu **5180**, aby działać równolegle z GameLogs na 5173. `strictPort` zatrzyma start, jeśli 5180 będzie zajęty, zamiast po cichu zmieniać adres. Po zmianie konfiguracji uruchom ponownie serwer Gnosythium przez `npm run dev`.
 
 Przycisk **Enter in fullscreen** uruchamia pełny ekran, a **Play in window** pozostawia grę w oknie. Przeglądarka może odmówić fullscreen — wtedy gra przechodzi do trybu okna. Źródła uruchamiaj przez Vite, nie przez Live Server ani `file://`. Pauza ma uproszczoną oprawę bez dodatkowego nagłówka i opisu; złotawy znak z referencji tatuażu zastępuje gwiazdkę menu. Celownik gry pozostaje bez zmian.
 
@@ -48,7 +48,7 @@ npm run build
 npm run preview
 ```
 
-Podgląd buildu używa osobnego portu **4180**: [127.0.0.1:4180/Gnosythium/](http://127.0.0.1:4180/Gnosythium/). `build` wykonuje również typecheck. `dist` jest wynikiem budowania i nie trafia do repo. Vite informuje o dużym pliku JavaScript z silnikiem Phaser; nie blokuje to buildu.
+Podgląd buildu używa osobnego portu **4180**: [127.0.0.1:4180/gnosythium/](http://127.0.0.1:4180/gnosythium/). `build` wykonuje również typecheck. `dist` jest wynikiem budowania i nie trafia do repo. Vite informuje o dużym pliku JavaScript z silnikiem Phaser; nie blokuje to buildu.
 
 ## Sterowanie i cel
 
@@ -107,7 +107,7 @@ Historyczna korekta dawnych klatek bloku (zastąpionych teraz bąblem): zielono-
 
 Utrata aktywności karty/okna i wyjście z fullscreen zatrzymują grę. Powrót nie wznawia jej automatycznie; przytrzymane akcje trzeba zwolnić i nacisnąć ponownie. Przy wejściu w fullscreen gra próbuje przechwycić tylko krótkie Esc przez Keyboard Lock. Jeśli przeglądarka nie wspiera API lub odmówisz zgody, używaj P. Długie Esc i przycisk „Exit fullscreen” w pauzie nadal pozwalają wyjść; nie ma gwarancji przechwycenia Esc na każdej przeglądarce.
 
-Muzyka w tle: dostarczony utwór **Astral Ritual**, zapętlony przy głośności 30%. Startuje po wejściu do gry, pauzuje razem z nią i kontynuuje po wznowieniu. Jeśli przeglądarka zablokuje dźwięk, kliknij arenę lub naciśnij klawisz podczas gry. MP3 jest lokalnym assetem importowanym przez Vite, z zachowaniem bazy `/Gnosythium/`.
+Muzyka w tle: dostarczony utwór **Astral Ritual**, zapętlony przy głośności 30%. Startuje po wejściu do gry, pauzuje razem z nią i kontynuuje po wznowieniu. Jeśli przeglądarka zablokuje dźwięk, kliknij arenę lub naciśnij klawisz podczas gry. MP3 jest lokalnym assetem importowanym przez Vite, z zachowaniem bazy `/gnosythium/`.
 
 ## Kod i dalsza praca
 
@@ -127,7 +127,7 @@ Dodano osiem SFX z paczki użytkownika: bolt/uderzenie magii, leczenie, tarcza, 
 - `src/ui/` i `src/game/GameSession.ts` — HUD, menu i cykl sesji.
 - [Parametry prototypu i scenariusz ręcznego odbioru](docs/PROTOTYPE.md).
 
-Wdrożenie przygotowuje `.github/workflows/deploy.yml`: PR sprawdza build, a push na `main` buduje i publikuje `dist`. Wymaga istniejącego ustawienia Pages → Source: GitHub Actions. Vite ma `base: '/Gnosythium/'`; PNG bohatera są importowane przez Vite, więc zachowują prefiks projektu również po buildzie. Trzy arkusze zajmują razem około 6,45 MB przed transportem.
+Wdrożenie przygotowuje `.github/workflows/deploy.yml`: PR sprawdza build, a push na `main` buduje i publikuje `dist`. Wymaga istniejącego ustawienia Pages → Source: GitHub Actions. Vite ma `base: '/gnosythium/'`; PNG bohatera są importowane przez Vite, więc zachowują prefiks projektu również po buildzie. Trzy arkusze zajmują razem około 6,45 MB przed transportem.
 
 ## Prawa i materiały
 
